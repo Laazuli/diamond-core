@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "diamond_core",
+  "version": "${version}",
+  "name": "DiamondCore",
+  "description": "",
+  "authors": [
+    "Laazuli"
+  ],
+  "contact": {
+    "repo": "https://github.com/laazuli/DiamondCore"
+  },
+  "license": "MIT",
+  "icon": "assets/diamond_core/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.laazuli.diamond_core.DiamondCore"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
