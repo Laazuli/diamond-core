@@ -39,8 +39,8 @@ public class ModBlocks {
         });
     }
 
-    public static void registerModBlocks() {
-        DiamondCore.LOGGER.info("Registering mod blocks for " + DiamondCore.MOD_ID);
+    public static void initializeModBlocks() {
+        DiamondCore.LOGGER.info("Initializing blocks for " + DiamondCore.MOD_ID);
 
         groupModBlockItems();
     }

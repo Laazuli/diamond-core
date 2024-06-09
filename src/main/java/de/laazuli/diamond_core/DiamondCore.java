@@ -16,8 +16,8 @@ public class DiamondCore implements ModInitializer {
     public void onInitialize() {
         System.out.println("Hello from " + MOD_ID + " initialization");
 
-        ModBlocks.registerModBlocks();
+        ModBlocks.initializeModBlocks();
 
-        ModItems.registerModItems();
+        ModItems.initializeModItems();
     }
 }
