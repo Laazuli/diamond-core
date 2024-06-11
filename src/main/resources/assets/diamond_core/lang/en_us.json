@@ -1,5 +1,6 @@
 {
   "block.diamond_core.condensed_sculk": "Condensed Sculk",
+
   "block.diamond_core.luminescent_end_stone": "Luminescent End Stone",
   "block.diamond_core.enderite_block": "Block of Enderite",
 
@@ -8,6 +9,8 @@
   "item.diamond_core.sculkanite_chestplate": "Sculkanite Chestplate",
   "item.diamond_core.sculkanite_leggings": "Sculkanite Leggings",
   "item.diamond_core.sculkanite_boots": "Sculkanite Boots",
+  "item.diamond_core.sculkanite_axe": "Sculkanite Axe",
+
 
   "item.diamond_core.enderite_clump": "Enderite Clump",
   "item.diamond_core.enderite_ingot": "Enderite Ingot",
