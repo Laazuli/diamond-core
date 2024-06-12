@@ -9,13 +9,23 @@
   "item.diamond_core.sculkanite_chestplate": "Sculkanite Chestplate",
   "item.diamond_core.sculkanite_leggings": "Sculkanite Leggings",
   "item.diamond_core.sculkanite_boots": "Sculkanite Boots",
-  "item.diamond_core.sculkanite_axe": "Sculkanite Axe",
 
+  "item.diamond_core.sculkanite_sword": "Sculkanite Sword",
+  "item.diamond_core.sculkanite_shovel": "Sculkanite Shovel",
+  "item.diamond_core.sculkanite_pickaxe": "Sculkanite Pickaxe",
+  "item.diamond_core.sculkanite_axe": "Sculkanite Axe",
+  "item.diamond_core.sculkanite_hoe": "Sculkanite Hoe",
 
   "item.diamond_core.enderite_clump": "Enderite Clump",
   "item.diamond_core.enderite_ingot": "Enderite Ingot",
   "item.diamond_core.enderite_helmet": "Enderite Helmet",
   "item.diamond_core.enderite_chestplate": "Enderite Chestplate",
   "item.diamond_core.enderite_leggings": "Enderite Leggings",
-  "item.diamond_core.enderite_boots": "Enderite Boots"
+  "item.diamond_core.enderite_boots": "Enderite Boots",
+
+  "item.diamond_core.enderite_sword": "Enderite Sword",
+  "item.diamond_core.enderite_shovel": "Enderite Shovel",
+  "item.diamond_core.enderite_pickaxe": "Enderite Pickaxe",
+  "item.diamond_core.enderite_axe": "Enderite Axe",
+  "item.diamond_core.enderite_hoe": "Enderite Hoe"
 }
