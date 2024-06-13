@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.0,
+  "ingredient": {
+    "item": "diamond_core:luminescent_end_stone"
+  },
+  "result": {
+    "id": "diamond_core:enderite_clump"
+  }
+}

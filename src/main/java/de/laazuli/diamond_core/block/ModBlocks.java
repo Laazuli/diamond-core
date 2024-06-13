@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModBlocks {
 
-    public static final Block CONDENSED_SCULK = registerBlock("condensed_sculk", new Block(BlockBehaviour.Properties.of()));
+    public static final Block CONDENSED_SCULK = registerBlock("condensed_sculk", new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final Block LUMINESCENT_END_STONE = registerBlock("luminescent_end_stone", new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final Block ENDERITE_BLOCK = registerBlock("enderite_block", new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK)));
 

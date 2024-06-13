@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "diamond_core:block/condensed_sculk_top",
-    "side": "diamond_core:block/condensed_sculk_side"
-  }
-}
