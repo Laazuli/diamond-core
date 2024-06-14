@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.data.recipes.packs.VanillaRecipeProvider;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -19,12 +20,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
-        System.out.println("Build recipies");
+        System.out.println("Build recipes");
         smeltingAndBlastingRecipe(exporter, ModBlocks.CONDENSED_SCULK, Items.ECHO_SHARD, 2.0f);
         smeltingAndBlastingRecipe(exporter, ModBlocks.LUMINESCENT_END_STONE, ModItems.ENDERITE_CLUMP, 2.0f);
 
         netheriteIngotLikeRecipe(exporter, Items.ECHO_SHARD, Items.AMETHYST_SHARD, ModItems.SCULKANITE_INGOT);
         netheriteIngotLikeRecipe(exporter, Items.QUARTZ, ModItems.ENDERITE_CLUMP, ModItems.ENDERITE_INGOT);
+        
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_SWORD);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_SHOVEL);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_PICKAXE);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_AXE);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_HOE);
+
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_SWORD);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_SHOVEL);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_PICKAXE);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_AXE);
+        smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_HOE);
 
         compacting(exporter, RecipeCategory.MISC, ModItems.ENDERITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENDERITE_BLOCK);
     }
@@ -62,4 +75,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private void compacting(RecipeOutput exporter, RecipeCategory unpackedCategory, ItemLike unpacked, RecipeCategory packedCategory, ItemLike packed) {
         nineBlockStorageRecipes(exporter, unpackedCategory, unpacked, packedCategory, packed, getConversionRecipeName(packed, unpacked), null, getConversionRecipeName(unpacked, packed), null);
     }
+
+    public static void smithing(RecipeOutput exporter, RecipeCategory recipeCategory, ItemLike template, Item base, Item material, Item result) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(template), Ingredient.of(base), Ingredient.of(material), recipeCategory, result).unlocks(getHasName(material), RecipeProvider.has(material)).save(exporter, RecipeProvider.getItemName(result) + "_smithing");
+    }
+
+//    private void swordRecipe(RecipeOutput exporter, ItemLike output, ItemLike material) {
+//        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+//                .pattern("#")
+//                .pattern("#")
+//                .pattern("I")
+//                .define('#', material)
+//                .define('I', Items.STICK)
+//                .unlockedBy(getHasName(material), has(material))
+//                .save(exporter);
+//    }
+//
+//    private void shovelRecipe(RecipeOutput exporter, ItemLike output, ItemLike material) {
+//        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+//                .pattern("#")
+//                .pattern("I")
+//                .pattern("I")
+//                .define('#', material)
+//                .define('I', Items.STICK)
+//                .unlockedBy(getHasName(material), has(material))
+//                .save(exporter);
+//    }
+//
+//    private void pickaxeRecipe(RecipeOutput exporter, ItemLike output, ItemLike material) {
+//        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+//                .pattern("###")
+//                .pattern(" I ")
+//                .pattern(" I ")
+//                .define('#', material)
+//                .define('I', Items.STICK)
+//                .unlockedBy(getHasName(material), has(material))
+//                .save(exporter);
+//    }
+//
+//    private void axeRecipe(RecipeOutput exporter, ItemLike output, ItemLike material) {
+//        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+//                .pattern("##")
+//                .pattern("#I")
+//                .pattern(" I")
+//                .define('#', material)
+//                .define('I', Items.STICK)
+//                .unlockedBy(getHasName(material), has(material))
+//                .save(exporter);
+//    }
+//
+//    private void hoeRecipe(RecipeOutput exporter, ItemLike output, ItemLike material) {
+//        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+//                .pattern("##")
+//                .pattern(" #")
+//                .pattern(" I")
+//                .define('#', material)
+//                .define('I', Items.STICK)
+//                .unlockedBy(getHasName(material), has(material))
+//                .save(exporter);
+//    }
 }
