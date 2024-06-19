@@ -29,7 +29,7 @@ public class ModArmorMaterials {
     }
 
     private static Holder<ArmorMaterial> registerArmorMaterial(String id, Map<ArmorItem.Type, Integer> defense, Holder<SoundEvent> equipSound, int enchantmentValue, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
-        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(new ResourceLocation(id)));
+        List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(new ResourceLocation(DiamondCore.MOD_ID, id)));
         EnumMap<ArmorItem.Type, Integer> completeDefenseMap = new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class);
         for (ArmorItem.Type type : ArmorItem.Type.values()) {
             completeDefenseMap.put(type, defense.get(type));

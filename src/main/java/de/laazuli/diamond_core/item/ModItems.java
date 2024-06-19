@@ -12,6 +12,7 @@ import net.minecraft.world.item.*;
 public class ModItems {
 
     // sculkanite
+    // TODO: make Sculkanite stuff silent (undetectable by sculk sensor)
     public static final Item SCULKANITE_INGOT = registerItem("sculkanite_ingot", new Item(new Item.Properties()));
 
     public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)))); // TODO: alter durability multiplier for material

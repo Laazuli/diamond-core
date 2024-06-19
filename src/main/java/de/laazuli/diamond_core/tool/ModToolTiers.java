@@ -14,7 +14,6 @@ import java.util.function.Supplier;
 
 public enum ModToolTiers implements Tier {
 
-    // TODO: adapt values
     SCULKANITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, Tiers.NETHERITE.getUses(), Tiers.NETHERITE.getSpeed(), Tiers.NETHERITE.getAttackDamageBonus(), Tiers.NETHERITE.getEnchantmentValue(), () -> Ingredient.of(ModItems.SCULKANITE_INGOT)),
     ENDERITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, Tiers.NETHERITE.getUses(), Tiers.NETHERITE.getSpeed(), Tiers.NETHERITE.getAttackDamageBonus(), Tiers.NETHERITE.getEnchantmentValue(), () -> Ingredient.of(ModItems.ENDERITE_INGOT));
 
@@ -26,7 +25,7 @@ public enum ModToolTiers implements Tier {
     private final Supplier<Ingredient> repairIngredient;
 
     ModToolTiers(TagKey<Block> incorrectBlocksForDrops, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient) {
-        this.incorrectBlocksForDrops = incorrectBlocksForDrops; // TODO: eventually add new tag
+        this.incorrectBlocksForDrops = incorrectBlocksForDrops;
         this.uses = uses;
         this.speed = speed;
         this.damage = damage;
@@ -60,7 +59,7 @@ public enum ModToolTiers implements Tier {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
 }

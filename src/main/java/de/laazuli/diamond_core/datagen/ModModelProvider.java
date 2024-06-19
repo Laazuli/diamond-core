@@ -44,7 +44,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.ENDERITE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ENDERITE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        // WHY ARE YOU USING THE WRONG NAMESPACE?? FUCK YOU
         itemModelGenerator.generateArmorTrims(((ArmorItem) ModItems.SCULKANITE_HELMET));
         itemModelGenerator.generateArmorTrims(((ArmorItem) ModItems.SCULKANITE_CHESTPLATE));
         itemModelGenerator.generateArmorTrims(((ArmorItem) ModItems.SCULKANITE_LEGGINGS));
