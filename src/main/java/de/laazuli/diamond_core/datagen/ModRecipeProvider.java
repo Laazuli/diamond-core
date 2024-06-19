@@ -39,6 +39,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_AXE);
         smithing(exporter, RecipeCategory.TOOLS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_HOE);
 
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_HELMET);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_CHESTPLATE);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_LEGGINGS);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, ModItems.SCULKANITE_INGOT, ModItems.SCULKANITE_BOOTS);
+
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_HELMET);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_CHESTPLATE);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_LEGGINGS);
+        smithing(exporter, RecipeCategory.COMBAT, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, ModItems.ENDERITE_INGOT, ModItems.ENDERITE_BOOTS);
+
         compacting(exporter, RecipeCategory.MISC, ModItems.ENDERITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENDERITE_BLOCK);
     }
 

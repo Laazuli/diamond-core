@@ -4,7 +4,6 @@ import de.laazuli.diamond_core.DiamondCore;
 import de.laazuli.diamond_core.armor.ModArmorMaterials;
 import de.laazuli.diamond_core.tool.ModToolTiers;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -15,10 +14,10 @@ public class ModItems {
     // sculkanite
     public static final Item SCULKANITE_INGOT = registerItem("sculkanite_ingot", new Item(new Item.Properties()));
 
-    public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(Holder.direct(ModArmorMaterials.SCULKANITE), ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)))); // TODO: alter durability multiplier for material
-    public static final Item SCULKANITE_CHESTPLATE = registerItem("sculkanite_chestplate", new ArmorItem(Holder.direct(ModArmorMaterials.SCULKANITE), ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
-    public static final Item SCULKANITE_LEGGINGS = registerItem("sculkanite_leggings", new ArmorItem(Holder.direct(ModArmorMaterials.SCULKANITE), ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
-    public static final Item SCULKANITE_BOOTS = registerItem("sculkanite_boots", new ArmorItem(Holder.direct(ModArmorMaterials.SCULKANITE), ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
+    public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)))); // TODO: alter durability multiplier for material
+    public static final Item SCULKANITE_CHESTPLATE = registerItem("sculkanite_chestplate", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
+    public static final Item SCULKANITE_LEGGINGS = registerItem("sculkanite_leggings", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
+    public static final Item SCULKANITE_BOOTS = registerItem("sculkanite_boots", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
 
     public static final Item SCULKANITE_SWORD = registerItem("sculkanite_sword", new SwordItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SCULKANITE, 3, -2.4f))));
     public static final Item SCULKANITE_SHOVEL = registerItem("sculkanite_shovel", new ShovelItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SCULKANITE, 1.5f, -3.0f))));
@@ -31,10 +30,10 @@ public class ModItems {
     public static final Item ENDERITE_CLUMP = registerItem("enderite_clump", new Item(new Item.Properties()));
     public static final Item ENDERITE_INGOT = registerItem("enderite_ingot", new Item(new Item.Properties()));
 
-    public static final Item ENDERITE_HELMET = registerItem("enderite_helmet", new ArmorItem(Holder.direct(ModArmorMaterials.ENDERITE), ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37))));
-    public static final Item ENDERITE_CHESTPLATE = registerItem("enderite_chestplate", new ArmorItem(Holder.direct(ModArmorMaterials.ENDERITE), ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
-    public static final Item ENDERITE_LEGGINGS = registerItem("enderite_leggings", new ArmorItem(Holder.direct(ModArmorMaterials.ENDERITE), ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
-    public static final Item ENDERITE_BOOTS = registerItem("enderite_boots", new ArmorItem(Holder.direct(ModArmorMaterials.ENDERITE), ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
+    public static final Item ENDERITE_HELMET = registerItem("enderite_helmet", new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37))));
+    public static final Item ENDERITE_CHESTPLATE = registerItem("enderite_chestplate", new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
+    public static final Item ENDERITE_LEGGINGS = registerItem("enderite_leggings", new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
+    public static final Item ENDERITE_BOOTS = registerItem("enderite_boots", new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
 
     public static final Item ENDERITE_SWORD = registerItem("enderite_sword", new SwordItem(ModToolTiers.ENDERITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.ENDERITE, 3, -2.4f))));
     public static final Item ENDERITE_SHOVEL = registerItem("enderite_shovel", new ShovelItem(ModToolTiers.ENDERITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.ENDERITE, 1.5f, -3.0f))));

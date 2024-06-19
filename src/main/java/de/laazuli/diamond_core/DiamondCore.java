@@ -19,5 +19,10 @@ public class DiamondCore implements ModInitializer {
         ModBlocks.initializeModBlocks();
 
         ModItems.initializeModItems();
+
+//        System.out.println(Minecraft.getInstance().getLevelSource().getBaseDir());
+//
+//        Minecraft.getInstance().disconnect();
+//        Minecraft.getInstance().createWorldOpenFlows().createLevelFromExistingSettings();
     }
 }
