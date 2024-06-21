@@ -43,7 +43,7 @@ public class ModItems {
     public static final Item ENDERITE_HOE = registerItem("enderite_hoe", new HoeItem(ModToolTiers.ENDERITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.ENDERITE, -3.0f, 0.0f))));
 
     private static Item registerItem(String id, Item item) {
-        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(DiamondCore.MOD_ID, id), item);
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(DiamondCore.MOD_ID, id), item);
     }
 
     private static void groupModItems() {

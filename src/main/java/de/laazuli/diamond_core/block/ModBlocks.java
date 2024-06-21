@@ -20,12 +20,12 @@ public class ModBlocks {
     public static final Block ENDERITE_BLOCK = registerBlock("enderite_block", new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK)));
 
     private static Item registerBlockItem(String id, Item item) {
-        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(DiamondCore.MOD_ID, id), item);
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(DiamondCore.MOD_ID, id), item);
     }
 
     private static Block registerBlock(String id, Block block) {
         registerBlockItem(id, new BlockItem(block, new Item.Properties()));
-        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(DiamondCore.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(DiamondCore.MOD_ID, id), block);
     }
 
     private static void groupModBlockItems() {

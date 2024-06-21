@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.7-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -22,32 +22,6 @@ fabricApi {
     configureDataGeneration()
 }
 
-//loom {
-//    runs {
-//        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
-//        datagen {
-//            inherit server
-//            name "Data Generation"
-//            vmArg "-Dfabric-api.datagen"
-//            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-//            vmArg "-Dfabric-api.datagen.modid=mccourse"
-//
-//            runDir "build/datagen"
-//        }
-//    }
-//}
-
-//// Add the generated resources to the main source set
-//sourceSets {
-//    main {
-//        resources {
-//            srcDirs += [
-//                    'src/main/generated'
-//            ]
-//        }
-//    }
-//}
-
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -66,7 +40,8 @@ processResources {
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+                "loader_version": project.loader_version,
+                "fabric_version": project.fabric_version
     }
 }
 
