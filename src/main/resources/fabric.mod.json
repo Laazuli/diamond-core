@@ -5,11 +5,13 @@
   "name": "DiamondCore",
   "description": "",
   "authors": [
-    "SpencyRock",
     "Laazuli"
   ],
+  "contributors": [
+    "SpencyRock"
+  ],
   "contact": {
-    "repo": "https://github.com/laazuli/DiamondCore"
+    "sources": "https://github.com/Laazuli/diamond-core"
   },
   "license": "MIT",
   "icon": "assets/diamond_core/icon.png",
@@ -22,6 +24,12 @@
       "de.laazuli.diamond_core.DiamondCoreDataGenerator"
     ]
   },
+  "mixins": [
+    {
+      "config": "diamond_core.mixins.json",
+      "environment": "*"
+    }
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "minecraft": ">=${minecraft_version}",

@@ -1,0 +1,9 @@
+{
+  "package": "de.laazuli.diamond_core.mixin",
+  "mixins": [
+    "BlockMixin",
+    "ItemEntityMixin",
+    "SculkSensorBlockEntityVibrationMixin",
+    "WardenVibrationMixin"
+  ]
+}

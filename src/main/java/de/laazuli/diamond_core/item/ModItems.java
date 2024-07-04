@@ -2,11 +2,13 @@ package de.laazuli.diamond_core.item;
 
 import de.laazuli.diamond_core.DiamondCore;
 import de.laazuli.diamond_core.armor.ModArmorMaterials;
+import de.laazuli.diamond_core.data_component.ModDataComponents;
 import de.laazuli.diamond_core.tool.ModToolTiers;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Unit;
 import net.minecraft.world.item.*;
 
 public class ModItems {
@@ -20,8 +22,8 @@ public class ModItems {
     public static final Item SCULKANITE_LEGGINGS = registerItem("sculkanite_leggings", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
     public static final Item SCULKANITE_BOOTS = registerItem("sculkanite_boots", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
 
-    public static final Item SCULKANITE_SWORD = registerItem("sculkanite_sword", new SwordItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SCULKANITE, 3, -2.4f))));
-    public static final Item SCULKANITE_SHOVEL = registerItem("sculkanite_shovel", new ShovelItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SCULKANITE, 1.5f, -3.0f))));
+    public static final Item SCULKANITE_SWORD = registerItem("sculkanite_sword", new SwordItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SCULKANITE, 3, -2.4f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
+    public static final Item SCULKANITE_SHOVEL = registerItem("sculkanite_shovel", new ShovelItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SCULKANITE, 1.5f, -3.0f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
     public static final Item SCULKANITE_PICKAXE = registerItem("sculkanite_pickaxe", new PickaxeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.SCULKANITE, 1.0f, -2.8f))));
     public static final Item SCULKANITE_AXE = registerItem("sculkanite_axe", new AxeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.SCULKANITE, 5.0f, -3.0f))));
     public static final Item SCULKANITE_HOE = registerItem("sculkanite_hoe", new HoeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.SCULKANITE, -3.0f, 0.0f))));
