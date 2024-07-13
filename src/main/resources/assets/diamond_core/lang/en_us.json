@@ -29,5 +29,8 @@
   "item.diamond_core.enderite_shovel": "Enderite Shovel",
   "item.diamond_core.enderite_pickaxe": "Enderite Pickaxe",
   "item.diamond_core.enderite_axe": "Enderite Axe",
-  "item.diamond_core.enderite_hoe": "Enderite Hoe"
+  "item.diamond_core.enderite_hoe": "Enderite Hoe",
+
+
+  "advancements.adventure.avoid_vibration.description": "Sneak near a Sculk Sensor or Warden to prevent it from detecting you ...or just wear a full set of Sculkanite Armor"
 }

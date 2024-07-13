@@ -17,10 +17,10 @@ public class ModItems {
     // TODO: make Sculkanite stuff silent (undetectable by sculk sensor)
     public static final Item SCULKANITE_INGOT = registerItem("sculkanite_ingot", new Item(new Item.Properties()));
 
-    public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)))); // TODO: alter durability multiplier for material
-    public static final Item SCULKANITE_CHESTPLATE = registerItem("sculkanite_chestplate", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
-    public static final Item SCULKANITE_LEGGINGS = registerItem("sculkanite_leggings", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
-    public static final Item SCULKANITE_BOOTS = registerItem("sculkanite_boots", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37))));
+    public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
+    public static final Item SCULKANITE_CHESTPLATE = registerItem("sculkanite_chestplate", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
+    public static final Item SCULKANITE_LEGGINGS = registerItem("sculkanite_leggings", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
+    public static final Item SCULKANITE_BOOTS = registerItem("sculkanite_boots", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
 
     public static final Item SCULKANITE_SWORD = registerItem("sculkanite_sword", new SwordItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SCULKANITE, 3, -2.4f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
     public static final Item SCULKANITE_SHOVEL = registerItem("sculkanite_shovel", new ShovelItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SCULKANITE, 1.5f, -3.0f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));

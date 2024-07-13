@@ -2,8 +2,9 @@
   "package": "de.laazuli.diamond_core.mixin",
   "mixins": [
     "BlockMixin",
+    "GameEventContextMixin",
     "ItemEntityMixin",
-    "SculkSensorBlockEntityVibrationMixin",
-    "WardenVibrationMixin"
+    "LivingEntityMixin",
+    "VibrationSystem$UserMixin"
   ]
 }
