@@ -1,4 +1,4 @@
-// 1.21	2024-06-21T20:21:51.4405616	DiamondCore/Model Definitions
+// 1.21	2024-07-14T19:39:43.2616214	DiamondCore/Model Definitions
 7284f0eebc32958718a5010caea91f7230fd91e7 assets\diamond_core\models\item\sculkanite_chestplate_gold_trim.json
 67b659c98545d87afdbc2275680b58b5834fadd1 assets\diamond_core\models\item\enderite_helmet_gold_trim.json
 c9db091a8fb1f8591607ac9b3989959cc8f0c9b1 assets\diamond_core\models\item\enderite_leggings_netherite_trim.json
@@ -68,8 +68,8 @@ a4e4ca86e9369ee3f2d0a074734462f0ecfc484e assets\diamond_core\models\item\enderit
 45cbbee553cd85ad4571f8f20e1d909155dc9fd1 assets\diamond_core\models\item\sculkanite_boots_copper_trim.json
 7075ae2bbc1a464fe01cc4abefa8ee1d06735717 assets\diamond_core\models\item\enderite_axe.json
 84dce52d5c5f68fda5c6ef471cb33fbf5034c8c1 assets\diamond_core\models\block\enderite_block.json
-28f01753741fff2a2e063f3ce49669ed821d3f11 assets\diamond_core\blockstates\enderite_block.json
 db215068363a0ef0ff5782904f1cea512a8b8d99 assets\diamond_core\models\item\sculkanite_boots_iron_trim.json
+28f01753741fff2a2e063f3ce49669ed821d3f11 assets\diamond_core\blockstates\enderite_block.json
 df2735606dcce4099cbd1dbcf31aba68110d93b0 assets\diamond_core\models\item\enderite_chestplate.json
 aee9f88d971a176bd904a14f265a4d7740cf5e93 assets\diamond_core\models\item\sculkanite_leggings_iron_trim.json
 4271a1c69b47f20da3ec5e42fa103a09e9d34fde assets\diamond_core\models\item\sculkanite_helmet_iron_trim.json

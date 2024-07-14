@@ -14,8 +14,7 @@ import net.minecraft.world.item.*;
 public class ModItems {
 
     // sculkanite
-    // TODO: make Sculkanite stuff silent (undetectable by sculk sensor)
-    public static final Item SCULKANITE_INGOT = registerItem("sculkanite_ingot", new Item(new Item.Properties()));
+    public static final Item SCULKANITE_INGOT = registerItem("sculkanite_ingot", new Item(new Item.Properties().component(ModDataComponents.SILENT, Unit.INSTANCE)));
 
     public static final Item SCULKANITE_HELMET = registerItem("sculkanite_helmet", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
     public static final Item SCULKANITE_CHESTPLATE = registerItem("sculkanite_chestplate", new ArmorItem(ModArmorMaterials.SCULKANITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
@@ -25,8 +24,8 @@ public class ModItems {
     public static final Item SCULKANITE_SWORD = registerItem("sculkanite_sword", new SwordItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SCULKANITE, 3, -2.4f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
     public static final Item SCULKANITE_SHOVEL = registerItem("sculkanite_shovel", new ShovelItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SCULKANITE, 1.5f, -3.0f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
     public static final Item SCULKANITE_PICKAXE = registerItem("sculkanite_pickaxe", new PickaxeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.SCULKANITE, 1.0f, -2.8f))));
-    public static final Item SCULKANITE_AXE = registerItem("sculkanite_axe", new AxeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.SCULKANITE, 5.0f, -3.0f))));
-    public static final Item SCULKANITE_HOE = registerItem("sculkanite_hoe", new HoeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.SCULKANITE, -3.0f, 0.0f))));
+    public static final Item SCULKANITE_AXE = registerItem("sculkanite_axe", new AxeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.SCULKANITE, 5.0f, -3.0f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
+    public static final Item SCULKANITE_HOE = registerItem("sculkanite_hoe", new HoeItem(ModToolTiers.SCULKANITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.SCULKANITE, -3.0f, 0.0f)).component(ModDataComponents.SILENT, Unit.INSTANCE)));
 
     // enderite
     // TODO: make Enderite stuff void resistant

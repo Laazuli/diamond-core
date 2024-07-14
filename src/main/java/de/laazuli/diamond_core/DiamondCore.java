@@ -42,22 +42,22 @@ public class DiamondCore implements ModInitializer {
 
         if (sourceEntity instanceof LivingEntity livingEntity) {
 //            System.out.println("Source Entity instance of Living entity");
-            return isMainHandItemSilent(gameEventHolder, livingEntity) || isArmorSilent(gameEventHolder, livingEntity) || isAffectedItemStackSilent(gameEventHolder, gameEventContext);
+            return resolveForMainHandItemSilent(gameEventHolder, livingEntity) || resolveForArmorSilent(gameEventHolder, livingEntity) || resolveForAffectedItemStackSilent(gameEventHolder, gameEventContext);
         }
 
         if (sourceEntity instanceof ItemEntity itemEntity) {
             boolean blockInteractionSilent = false;
             BlockState affectedState = gameEventContext.affectedState();
             if (affectedState != null) {
-                blockInteractionSilent = isBlockInteractionSilent(gameEventHolder, affectedState, itemEntity);
+                blockInteractionSilent = resolveForBlockInteractionSilent(gameEventHolder, affectedState, itemEntity);
             }
-            return isItemEntitySilent(gameEventHolder, itemEntity) || blockInteractionSilent;
+            return resolveForItemEntitySilent(gameEventHolder, itemEntity) || blockInteractionSilent;
         }
 
         return false;
     }
 
-    public static boolean isWearingFullSetOfSilenceArmor(@NotNull LivingEntity livingEntity) {
+    public static boolean resolveForWearingFullSetOfSilenceArmor(@NotNull LivingEntity livingEntity) {
         int silentArmorCount = 0;
         for (ItemStack armorItemStack : livingEntity.getArmorSlots()) {
             if (armorItemStack.has(ModDataComponents.SILENT)) {
@@ -67,21 +67,21 @@ public class DiamondCore implements ModInitializer {
         return silentArmorCount > 3;
     }
 
-    private static boolean isMainHandItemSilent(@NotNull Holder<GameEvent> gameEvent, LivingEntity sourceEntity) {
+    private static boolean resolveForMainHandItemSilent(@NotNull Holder<GameEvent> gameEvent, LivingEntity sourceEntity) {
         if (gameEvent.is(GameEvent.BLOCK_CHANGE.key()) || gameEvent.is(GameEvent.BLOCK_DESTROY.key())) {
             return sourceEntity.getMainHandItem().has(ModDataComponents.SILENT);
         }
         return false;
     }
 
-    private static boolean isArmorSilent(@NotNull Holder<GameEvent> gameEvent, LivingEntity sourceEntity) {
+    private static boolean resolveForArmorSilent(@NotNull Holder<GameEvent> gameEvent, LivingEntity sourceEntity) {
         if (gameEvent.is(GameEvent.HIT_GROUND.key()) || gameEvent.is(GameEvent.SPLASH.key()) || gameEvent.is(GameEvent.STEP.key()) || gameEvent.is(GameEvent.SWIM.key())) {
-            return isWearingFullSetOfSilenceArmor(sourceEntity);
+            return resolveForWearingFullSetOfSilenceArmor(sourceEntity);
         }
         return false;
     }
 
-    private static boolean isAffectedItemStackSilent(@NotNull Holder<GameEvent> gameEvent, GameEvent.Context context) {
+    private static boolean resolveForAffectedItemStackSilent(@NotNull Holder<GameEvent> gameEvent, GameEvent.Context context) {
 //        System.out.println("DiamondCore#isAffectedItemStackSilent");
         if (!(gameEvent.is(GameEvent.EQUIP.key()) || gameEvent.is(GameEvent.UNEQUIP.key()))) {
 //            System.out.println("incorrect event");
@@ -97,7 +97,7 @@ public class DiamondCore implements ModInitializer {
         return affectedItemStack.has(ModDataComponents.SILENT);
     }
 
-    private static boolean isItemEntitySilent(@NotNull Holder<GameEvent> gameEvent, ItemEntity itemEntity) {
+    private static boolean resolveForItemEntitySilent(@NotNull Holder<GameEvent> gameEvent, ItemEntity itemEntity) {
         if (gameEvent.is(GameEvent.HIT_GROUND.key()) || gameEvent.is(GameEvent.SPLASH.key())) {
             boolean itemSilent = itemEntity.getItem().has(ModDataComponents.SILENT);
             boolean itemEntitySilent = itemEntity instanceof VibrationSuppressible suppressible && suppressible.areVibrationsSuppressed();
@@ -106,7 +106,7 @@ public class DiamondCore implements ModInitializer {
         return false;
     }
 
-    private static boolean isBlockInteractionSilent(@NotNull Holder<GameEvent> gameEvent, @NotNull BlockState affectedState, ItemEntity itemEntity) {
+    private static boolean resolveForBlockInteractionSilent(@NotNull Holder<GameEvent> gameEvent, @NotNull BlockState affectedState, ItemEntity itemEntity) {
         if (gameEvent.is(GameEvent.BLOCK_ACTIVATE.key()) || gameEvent.is(GameEvent.BLOCK_DEACTIVATE.key())) {
             return affectedState.is(BlockTags.PRESSURE_PLATES) || affectedState.is(Blocks.TRIPWIRE_HOOK);
         }
